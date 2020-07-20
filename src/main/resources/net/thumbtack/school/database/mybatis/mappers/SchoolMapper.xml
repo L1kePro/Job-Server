@@ -1,0 +1,44 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<!DOCTYPE mapper-->
+        <!--PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"-->
+        <!--"http://mybatis.org/dtd/mybatis-3-mapper.dtd">-->
+
+<!--<mapper namespace="net.thumbtack.school.database.mybatis.mappers.SchoolMapper">-->
+
+    <!--<resultMap id="resultSchool" type="net.thumbtack.school.database.model.School">-->
+        <!--<id property="id" column="id" />-->
+        <!--<result property="name" column="school_name" />-->
+        <!--<result property="year" column="school_year" />-->
+        <!--<collection property="group" column="id" javaType="java.util.List"-->
+                    <!--ofType="net.thumbtack.school.database.model.Group">-->
+                    <!--<result property="id" column="group_id" />-->
+                    <!--<result property="name" column="group_name" />-->
+                    <!--<result property="room" column="room" />-->
+            <!--<collection property="subjects" column="id" javaType="java.util.List"-->
+                        <!--ofType="net.thumbtack.school.database.model.Subject">-->
+                        <!--<result property="id" column="subject_id" />-->
+                        <!--<result property="name" column="subject_name" />-->
+            <!--</collection>-->
+        <!--</collection>-->
+    <!--</resultMap>-->
+
+    <!--<select id="getAllUsingJoin" resultMap="resultSchool">-->
+        <!--select school.id as id, school.name as school_name, year as school_year,-->
+        <!--`group`.id as group_id, `group`.name as group_name, `group`.room as room,-->
+        <!--subject.id as subject_id, subject.name as subject_name, id_subject as id_subject FROM school-->
+        <!--JOIN `group` ON `group`.id_school = school.id-->
+        <!--JOIN group_subject ON id_group = `group`.id-->
+        <!--JOIN subject ON subject.id = id_subject;-->
+
+        <!--&lt;!&ndash;select school.id as id, school.name as school_name, year as year,&ndash;&gt;-->
+        <!--&lt;!&ndash;`group`.id as group_id, `group`.name as group_name, `group`.room as group_room,&ndash;&gt;-->
+        <!--&lt;!&ndash;trainee.id as trainee_id, trainee.firstName as trainee_firstName, trainee.lastName as trainee_lastName, rating as rating, trainee.id_group as trainee_id_group,&ndash;&gt;-->
+        <!--&lt;!&ndash;subject.id as subject_id, subject.name as subject_name, id_subject as id_subject&ndash;&gt;-->
+        <!--&lt;!&ndash;FROM school&ndash;&gt;-->
+        <!--&lt;!&ndash;JOIN `group` ON `group`.id_school = school.id&ndash;&gt;-->
+        <!--&lt;!&ndash;JOIN trainee ON trainee.id_group = `group`.id&ndash;&gt;-->
+        <!--&lt;!&ndash;JOIN group_subject ON group_subject.id_group = `group`.id&ndash;&gt;-->
+        <!--&lt;!&ndash;JOIN subject ON subject.id = id_subject;&ndash;&gt;-->
+    <!--</select>-->
+
+<!--</mapper>-->
